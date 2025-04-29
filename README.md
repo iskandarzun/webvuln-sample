@@ -33,19 +33,18 @@
 ## 2. Install Required Libraries
 
 - Open a terminal/command prompt and run:
-	`pip install flask requests markupsafe jinja2`
+	`pip install flask requests markupsafe`
 
 ----------
 
 ## 3. Verify Installations
 
 - Check installed packages:
-	`pip list | grep -E 'Flask | requests | MarkupSafe | Jinja2'`
+	`pip list | grep -E 'Flask | requests | MarkupSafe'`
 
 - Expected output:
 	```
 	Flask 3.0.x
-	Jinja2 3.1.x
 	MarkupSafe 2.1.x
 	requests 2.31.x
 	```
@@ -103,7 +102,7 @@ webvuln-sample/
 
 ```
 # Not recommended, use virtualenv instead to prevent break of local python libraries
-sudo pip install flask requests markupsafe jinja2
+sudo pip install flask requests markupsafe
 ```
 
 ### PATH Issues (Windows):
@@ -116,7 +115,7 @@ sudo pip install flask requests markupsafe jinja2
 ### Package Conflicts:
 
 ```
-pip uninstall flask jinja2 markupsafe requests
+pip uninstall flask markupsafe requests
 pip install --no-cache-dir flask requests
 ```
 ----------

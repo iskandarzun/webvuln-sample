@@ -2,8 +2,7 @@ from flask import Flask, request, redirect, render_template_string, render_templ
 import requests
 import os
 
-from jinja2 import Template #Fix for SSTI
-from markupsafe import escape #Fix for XSS
+from markupsafe import escape #Fix for XSS & SSTI - Sanitize Input
 
 app = Flask(__name__)
 app.secret_key = 'insecure-secret-key'
