@@ -28,9 +28,11 @@ def profile(username):
 @app.route('/search')
 def search():
     query = request.args.get('q', '')
-    return f'''<h1>Search Results</h1>
+    return f'''<!DOCTYPE html><html><body><h1>Search Page</h1><form action="/search">
+        	<input type="text" name="q">
+        	<input type="submit" value="Search"></form><h1>Search Results</h1>
               <p>Showing results for: {query}</p>
-              <a href="/">Back to Home</a>'''
+              <a href="/">Back to Home</a></body></html>'''
 
 # Vulnerability 3: Server-Side Request Forgery (SSRF)
 @app.route('/fetch')
